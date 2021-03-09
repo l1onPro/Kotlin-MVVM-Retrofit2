@@ -45,7 +45,7 @@ class RecyclerListFragment : Fragment() {
         recyclerView.adapter = recyclerAdapter
 
         val viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
-        viewModel.getRecyclerListObserver().observe(this, Observer<RecyclerList> {
+        viewModel.recyclerListLiveData.observe(this, Observer<RecyclerList> {
             if (it != null) {
                 recyclerAdapter.setUpdatedData(it.items)
             } else {

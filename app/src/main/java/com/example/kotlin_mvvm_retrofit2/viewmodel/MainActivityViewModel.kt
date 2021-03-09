@@ -11,15 +11,7 @@ import kotlinx.coroutines.launch
 
 class MainActivityViewModel : ViewModel() {
 
-    lateinit var recyclerListLiveData: MutableLiveData<RecyclerList>
-
-    init {
-        recyclerListLiveData = MutableLiveData()
-    }
-
-    fun getRecyclerListObserver() : MutableLiveData<RecyclerList> {
-        return recyclerListLiveData
-    }
+    val recyclerListLiveData: MutableLiveData<RecyclerList> = MutableLiveData()
 
     fun makeApiCall() {
         viewModelScope.launch(Dispatchers.IO) {
