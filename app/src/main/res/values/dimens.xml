@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_size">100dp</dimen>
+    <dimen name="spacing_normal_16">16dp</dimen>
+    <dimen name="fond_large_20">20sp</dimen>
+    <dimen name="font_normal_16">16sp</dimen>
+    <dimen name="spacing_small_8">8dp</dimen>
+</resources>
