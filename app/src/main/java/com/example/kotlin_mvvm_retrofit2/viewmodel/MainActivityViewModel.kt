@@ -10,6 +10,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MainActivityViewModel : ViewModel() {
+
     lateinit var recyclerListLiveData: MutableLiveData<RecyclerList>
 
     init {
