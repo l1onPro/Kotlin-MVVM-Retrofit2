@@ -12,7 +12,7 @@ import com.squareup.picasso.Picasso
 
 class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
 
-    var items = ArrayList<RecyclerData>()
+    private var items = ArrayList<RecyclerData>()
 
     fun setUpdatedData(items : ArrayList<RecyclerData>) {
         this.items = items
@@ -33,13 +33,12 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolde
             Picasso.get()
                 .load(url)
                 .into(imageThumb)
-
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_list_item, parent, false)
-
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.recycler_list_item, parent, false)
         return MyViewHolder(view)
     }
 
@@ -48,6 +47,6 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolde
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bind(items.get(position))
+        holder.bind(items[position])
     }
 }
