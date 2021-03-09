@@ -20,9 +20,9 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolde
     }
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-        val imageThumb = itemView.findViewById<ImageView>(R.id.imageThumb)
-        val tvTitle = itemView.findViewById<TextView>(R.id.tv_title)
-        val tvDesk = itemView.findViewById<TextView>(R.id.tv_desc)
+        private val imageThumb = itemView.findViewById<ImageView>(R.id.imageThumb)
+        private val tvTitle = itemView.findViewById<TextView>(R.id.tv_title)
+        private val tvDesk = itemView.findViewById<TextView>(R.id.tv_desc)
 
         fun bind(data: RecyclerData) {
             tvTitle.text = data.name

@@ -5,4 +5,5 @@
     <dimen name="fond_large_20">20sp</dimen>
     <dimen name="font_normal_16">16sp</dimen>
     <dimen name="spacing_small_8">8dp</dimen>
+    <dimen name="size_item_recycler">116dp</dimen>
 </resources>
